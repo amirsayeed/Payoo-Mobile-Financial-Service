@@ -3,7 +3,7 @@ document.getElementById("add-money-btn").addEventListener("click", function(even
     const balance = document.getElementById("balance").innerText;
     const convertBalance = parseInt(balance);
     const amount = document.getElementById("amount-number").value;
-    const convertAmount = parseInt(amount);
+    const convertAmount = parseFloat(amount);
     const pin = document.getElementById("pin").value;
     const convertPin = parseInt(pin);
 
