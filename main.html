@@ -23,7 +23,7 @@
         </header>
         <section class="mt-10">
             <h1 class="text-2xl font-bold mb-2">Welcome to Payooo!</h1>
-            <p>
+            <p class="text-lg">
                 Enjoy easy and convenient financial services with us. Cashout charge
                 is low and
             </p>
@@ -63,12 +63,12 @@
                         <form class="card-body">
                             <fieldset class="fieldset">
                                 <legend class="fieldset-legend">Select a bank</legend>
-                                <select class="select">
+                                <select id="all-bank" class="select">
                                     <option disabled selected>Select Bank</option>
-                                    <option>bKash</option>
-                                    <option>Nagad</option>
-                                    <option>upay</option>
-                                    <option>dbbl</option>
+                                    <option value="Bkash">bKash</option>
+                                    <option value="Nagad">nagad</option>
+                                    <option value="UPAY">upay</option>
+                                    <option value="DBBL">dbbl</option>
                                 </select>
 
                                 <label class="fieldset-label">Account Number</label>
@@ -124,9 +124,10 @@
     </section>
 
     <script src="./utility/utility.js"></script>
-    <script src="./js/add-money.js"></script>
     <script src="./js/toggle.js"></script>
+    <script src="./js/add-money.js"></script>
     <script src="./js/cashout.js"></script>
+    <script src="./js/transaction.js"></script>
 </body>
 
 </html>

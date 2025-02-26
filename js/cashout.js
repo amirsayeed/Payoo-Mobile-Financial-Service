@@ -7,6 +7,10 @@ document.getElementById("cashout-btn").addEventListener("click", function(event)
     
     const pin = getInputById("cashout-pin");
     
+    if(amount > mainBalance){
+        alert("You don't have enough balance.");
+        return;
+    }
 
     if(amount && pin){
         if(pin === 1234){

@@ -4,7 +4,12 @@ document.getElementById("add-money-btn").addEventListener("click", function(even
     const amount = getInputById("amount-number");
     const pin = getInputById("pin");
     const account = document.getElementById("account-number").value;
+    const selectBank = document.getElementById("all-bank").value;
     
+    if(amount < 0){
+        alert("Enter valid amount");
+        return;
+    }
 
     if(amount && pin){
         if(pin === 1234){
@@ -12,9 +17,12 @@ document.getElementById("add-money-btn").addEventListener("click", function(even
             setInnerTextByValue("balance", sum);
             const transaction = document.getElementById("transaction-container");
             const transactionDiv = document.createElement("div");
-            transactionDiv.classList.add("p-2","bg-gray-300","rounded-lg","drop-shadow-lg", "my-2");
+            transactionDiv.classList.add("p-2","bg-gray-300","rounded-lg","drop-shadow-lg", "mb-4");
             transactionDiv.innerHTML = `
-            <h1 class="text-lg">${amount} added by ${account}</h1>
+            <h1 class="text-lg">Added money from ${selectBank}</h1>
+            <h2 class="text-lg">Amount: ${amount}</h2>
+            <p>Account number: ${account}</p>
+            <p>Transection id: ${Math.round(Math.random()*100000000)}</p>
             `
             transaction.appendChild(transactionDiv);
         }else{
