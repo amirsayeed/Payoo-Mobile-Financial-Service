@@ -17,7 +17,7 @@ document.getElementById("add-money-btn").addEventListener("click", function(even
             setInnerTextByValue("balance", sum);
             const transaction = document.getElementById("transaction-container");
             const transactionDiv = document.createElement("div");
-            transactionDiv.classList.add("p-2","bg-gray-300","rounded-lg","drop-shadow-lg", "mb-4");
+            transactionDiv.classList.add("p-2","bg-gray-300","rounded-lg","drop-shadow-lg", "mt-2");
             transactionDiv.innerHTML = `
             <h1 class="text-lg">Added money from ${selectBank}</h1>
             <h2 class="text-lg">Amount: ${amount}</h2>

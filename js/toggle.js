@@ -18,4 +18,3 @@ document.getElementById("transaction-box").addEventListener("click", function(ev
     doToggle("cashout","none");
     doToggle("add-money","none");
 });
-
