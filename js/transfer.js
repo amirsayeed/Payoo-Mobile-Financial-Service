@@ -1,11 +1,11 @@
-document.getElementById("cashout-btn").addEventListener("click", function(event) {
+document.getElementById("transfer-btn").addEventListener("click", function(event) {
     event.preventDefault();
-    const account = document.getElementById("account-cashout").value;
+    const account = document.getElementById("account-transfer").value;
     const mainBalance = getInputInnerTextById("balance");
     
-    const amount = getInputById("amount-cashout");
+    const amount = getInputById("amount-transfer");
     
-    const pin = getInputById("cashout-pin");
+    const pin = getInputById("transfer-pin");
     
     if(amount > mainBalance){
         alert("You don't have enough balance.");
@@ -21,7 +21,7 @@ document.getElementById("cashout-btn").addEventListener("click", function(event)
             const transactionDiv = document.createElement("div");
             transactionDiv.classList.add("p-2","bg-gray-300","rounded-lg","drop-shadow-lg", "my-2");
             transactionDiv.innerHTML = `
-            <h1 class="text-lg">${amount} cashed out by ${account}</h1>
+            <h1 class="text-lg">${amount} transferred to ${account}</h1>
             `
             transaction.appendChild(transactionDiv);
         }else{
